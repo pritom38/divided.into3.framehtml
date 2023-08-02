@@ -1,0 +1,125 @@
+<!--
+    Question 2. Use frames such that page is divided into 3 frames 20% on left to show contents of pages, 
+60% in center to show body of page, remaining on right to show remarks. Embed Audio 
+and Video into your HTML web page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout with Embedded Audio and Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            max-width: 960px;
+            margin: 20px auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-column {
+            flex: 1;
+            padding: 10px;
+            background-color: #F3B5D5;
+            border-right: 1px solid #ccc;
+        }
+
+        .center-column {
+            flex: 3;
+            padding: 10px;
+        }
+
+        .right-column {
+            flex: 1;
+            padding: 10px;
+            background-color: #B5EAD7;
+            border-left: 1px solid #ccc;
+        }
+
+        audio,
+        video {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            color: #555;
+        }
+
+        h2 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Embedded Audio and Video</h1>
+    </header>
+    <div class="container">
+        <div class="left-column">
+            <ul>
+                <li><a href="#link1">Page 1</a></li>
+                <li><a href="#link2">Page 2</a></li>
+                <li><a href="#link3">Page 3</a></li>
+            </ul>
+        </div>
+        <div class="center-column">
+            <h2>Body of Page</h2>
+            <p>
+                Audio
+            </p>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p>
+                Video
+            </p>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+        <div class="right-column">
+            <h2>Remarks</h2>
+            <p>
+                Add remarks or additional information here.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
